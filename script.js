@@ -20,7 +20,7 @@ const CriarPlayers = () => {
 const ChecarVencedor = (player1, player2) => {
   if (!player1 || !player2 || checandoVencedor) return;
 
-  checandoVencedor == true;
+  checandoVencedor = true;
   if (player1.jogou === player2.jogou) MostrarVencedor("Ambos");
   else if (player1.jogou === "Papel" && player2.jogou === "Pedra")
     MostrarVencedor(player1.nome);
