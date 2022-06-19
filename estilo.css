@@ -1,0 +1,225 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;1,700&display=swap");
+
+:root {
+  --primary-dark: #4c3a51;
+  --primary-light: #b25068;
+  --primary-color: #774360;
+  --accent-color: #e7ab79;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Lato", sans-serif;
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+}
+
+#root > header {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--accent-color);
+}
+
+#jogo {
+  max-width: 1000px;
+  width: 80%;
+  display: flex;
+}
+
+.box-central {
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: var(--primary-dark);
+  border-radius: 6px;
+}
+
+.box-central > p {
+  font-size: 10rem;
+}
+
+.box-lateral {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin: 0 5px;
+}
+.emoji {
+  text-align: center;
+  font-size: 4rem;
+  background: transparent;
+  border-radius: 6px;
+  padding: 10px;
+}
+
+.emoji:hover {
+  background-color: var(--primary-dark);
+}
+
+.invert {
+  transform: rotate(0) scale(-1, 1);
+}
+
+.mao1 {
+  animation: mao1shake 5s forwards;
+  transition: content 0.5s ease;
+}
+
+.mao2 {
+  animation: mao2shake 5s forwards;
+  transition: content 0.5s ease;
+}
+
+@keyframes mao1shake {
+  0% {
+    transform: rotate(0) scale(-1, 1);
+  }
+  25% {
+    transform: rotate(-30deg) scale(-1, 1);
+  }
+  50% {
+    transform: rotate(0) scale(-1, 1);
+  }
+  60% {
+    transform: rotate(-30deg) scale(-1, 1);
+  }
+  75% {
+    transform: rotate(0) scale(-1, 1);
+  }
+  100% {
+    transform: rotate(90deg) scale(-1, 1);
+  }
+}
+@keyframes mao2shake {
+  0% {
+    transform: rotate(0deg);
+  }
+  25% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  60% {
+    transform: rotate(30deg);
+  }
+  75% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(-90deg);
+  }
+}
+
+.tesoura::before {
+  display: inline;
+  content: "\270C";
+}
+
+.papel::before {
+  display: inline;
+  content: "\1F590";
+}
+
+.pedra::before {
+  display: inline;
+  content: "\270A";
+}
+
+#escolher-nome {
+  position: absolute;
+  background: var(--accent-color);
+  padding: 50px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  gap: 10px;
+}
+
+#escolher-nome > h1 {
+  font-size: 5rem;
+  text-align: center;
+}
+
+#escolher-nome > input {
+  outline: none;
+  padding: 10px;
+  font-size: 2rem;
+  text-align: center;
+  border-radius: 6px;
+  color: var(--accent-color);
+}
+
+#escolher-nome > button {
+  padding: 20px;
+  font-size: 3rem;
+  background: var(--primary-color);
+  border-radius: 6px;
+  color: white;
+}
+#escolher-nome > button:HOVER {
+    background: var(--primary-dark);
+  }
+
+.mostrar-vencedor {
+  z-index: 3;
+  position: absolute;
+  bottom: 20px;
+  background: #e7ab79;
+  width: 100%;
+  padding: 150px;
+  display: grid;
+  place-items: center;
+  animation: mostrarVencedor 2s forwards;
+  gap: 10px;
+}
+
+.mostrar-vencedor > p {
+  font-size: 5rem;
+  color: white;
+}
+
+.mostrar-vencedor > button {
+  background: var(--primary-color);
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
+}
+
+@keyframes mostrarVencedor {
+  0% {
+    bottom: 20px;
+    opacity: 0;
+  }
+  100% {
+    bottom: 200px;
+    opacity: 1;
+  }
+}
+
+.none {
+  display: none;
+  visibility: hidden;
+}

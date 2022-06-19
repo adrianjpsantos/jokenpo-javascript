@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="fireworks.css">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Jokenpo com Javascript</title>
+</head>
+
+<body>
+
+
+    <div id="root">
+        <section id="mostrar-vencedor" class="none" disabled>
+                <section id="fires">
+                    <div class="firework" id="firework1">
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                    </div>
+                    <div class="firework" id="firework2">
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                    </div>
+                    <div class="firework" id="firework3">
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                        <div class="explosion"></div>
+                    </div>
+                </section>
+                <p id="vencedor">Ambos Venceram</p>
+                <button onclick="JogarNovamente()">Jogar Novamente</button>
+        </section>
+
+        <section id="escolher-nome" >
+            <h1>jokenpô</h1>
+            <input id="p1" type="text" placeholder="Nome do Player 1">
+            <input id="p2" type="text" placeholder="Nome do Player 2">
+            <button onclick="CriarPlayers()">Continuar</button>
+        </section>
+        
+        <header id="jogadores" class="none">Jogador1 &#127386 Jogador2</header>
+
+        <section id="jogo" disabled class="none" >
+
+            <aside id="l1" class="box-lateral">
+                <button class="emoji" onclick="EscolherMao(1,'Papel')">
+                    &#128400
+                </button>
+                <button class="emoji" onclick="EscolherMao(1,'Pedra')">
+                    &#9994
+                </button>
+                <button class="emoji" onclick="EscolherMao(1,'Tesoura')">
+                    &#9996
+                </button>
+            </aside>
+
+            <main class="box-central">
+                <p id="mao1" class="pedra invert"></p>
+                <p id="mao2" class="pedra"></p>
+            </main>
+
+            <aside id="l2" class="box-lateral">
+                <button class="emoji" onclick="EscolherMao(2,'Tesoura')">
+                    &#9996
+                </button>
+                <button class="emoji" onclick="EscolherMao(2,'Pedra')">
+                    &#9994
+                </button>
+                <button class="emoji" onclick="EscolherMao(2,'Papel')">
+                    &#128400
+                </button>
+            </aside>
+
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
